@@ -1,65 +1,96 @@
-/* Apply the Quicksand font to the entire body */
-body {
-    font-family: 'Quicksand', sans-serif;
-    background-color: #f4f4f4; /* Light background for contrast */
-    margin: 0;
-    padding: 0;
+:root {
+    --dark1: #0c042c; 
+    --dark2: #0c214b; 
+    --light1: #c3ccd4; 
+    --neutral-gray: #b0b8c1;
+    --neutral-bg-color: rgba(176, 184, 193, 0.2);
+    --contrast-color: #3a255d;
+    --contrast-color-shadow: #3b255d2c; 
+    --contrast-color2: #6a2dcc; 
+    --positive-color: #2ac670; 
+    --tittle1: whitesmoke; 
+    --circle-color-shadow: rgba(42, 196, 221,0.15);
 }
-
-/* Header styles */
-header {
-    background-color: var(--dark2); /* Dark header */
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+main{ 
+    height: 1800px;
 }
-
-/* Main container for details */
-.detail-container {
-    width: 90%; /* Adjust for better responsiveness */
-    max-width: 800px; /* Center the content */
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff; /* White background for details */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+.container-risultati{
+    width: 98%;
+    margin: 2rem auto;
 }
-
-/* Each row for detail items */
-.detail-card {
-    margin: 10px 0; /* Spacing between fields */
+.card-personal-info{
+    background-color: var(--tittle1);
+    border-radius: 8px;
+    padding: 10px; 
 }
-
-.detail-row {
+.card-content-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.card-personal-info h3,
+.exams-container h3{
+    color: var(--contrast-color);
+}
+.detail-row{
     display: flex;
-    justify-content: space-between; /* Space between label and value */
-    padding: 10px 0; /* Padding for better spacing */
-    border-bottom: 1px solid #e0e0e0; /* Light border for separation */
+    justify-content: flex-start;
+    align-items: center;
 }
-
-/* Label styles */
-.detail-label {
-    font-weight: bold; /* Bold for labels */
-    color: var(--dark1); /* Use your dark color variable */
+.detail-row p{
+    font-size: 18px;
 }
-
-/* Value styles */
-.detail-value {
-    color: var(--dark2); /* Use your secondary dark color */
+span{
+    color: var(--contrast-color2);
+    font-weight: bold;
+    padding-right: 10px;
 }
-
-/* Back button styling */
-.back-button {
-    display: inline-block;
-    margin-top: 20px; /* Spacing above the button */
-    padding: 10px 20px;
-    background-color: var(--contrast-color2); /* Use your contrast color */
-    color: #fff; /* White text for contrast */
-    text-decoration: none; /* Remove underline */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+.exams-container{
+    margin-top: 1rem;
+    background-color: var(--tittle1);
+    border-radius: 8px;
+    padding: 10px;
 }
-
-.back-button:hover {
-    background-color: var(--contrast-color); /* Darker shade on hover */
+.content-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.indicator-container{
+    padding: 20px;
+}
+.description{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.indicator{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.negativeTesto{
+    color: red;
+}
+.positiveTesto{
+    color: var(--positive-color);
+}
+.barra-container{
+    background-color: var(--neutral-bg-color);
+    border-radius: 8px;
+    height: 1.5rem;
+    position: relative;
+}
+.barra-pointer{
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+}
+.positive{
+    background-color: var(--positive-color);
+}
+.negative{
+    background-color: red;
 }
