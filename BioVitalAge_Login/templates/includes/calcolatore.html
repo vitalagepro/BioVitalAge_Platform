@@ -55,19 +55,36 @@
                 <h3>Risultato Calcolo età Biologica</h3>
                 <p>La tua età biologica è: <span>{{ biological_age }}</span></p>
 
-                <p class="Subtitle">Dati Inseriti</p>
                 <div class="valoriInseritiContainer">
-                  
+                    <p class="Subtitle">Dati Inseriti</p>
+
                     {% for key, value in data.items %}
-                        <p><span>{{ key }}:</span> {{ value }}</p>
+
+                    {% if key != 'name' and key != 'surname' and key != 'dob' and key != 'gender' and key != 'place_of_birth' and key != 'codice_fiscale' and key != 'chronological_age' %}
+                            <div class="col-md-12 indicator-container">
+                                <p><span>{{ key }}</span>: {{ value }}</p>
+                                <div class="col-md-12 card-exam">
+                                    <div class="indicator">
+                                        <p class="negativeTesto">Cattivo</p>
+                                        <p class="positiveTesto">Buono</p>
+                                    </div>
+                                
+                                    <div class="col-md-12 p-2 barra-container">
+                                        <p class="barra-pointer positive"></p>
+                                    </div>
+                                </div>
+                            </div> 
+                        {% endif %}
                     {% endfor %}
+
                 </div>
-
-
                 <button onclick="closeModal()">Chiudi</button>
             </div>
-
         </div>
+
+
+
+        
 
         <!-- Gestione Modal -->
         <script>

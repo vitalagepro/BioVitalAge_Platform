@@ -1,3 +1,4 @@
+
 def adjust_age_glucose(glucose):
     glucose = float(glucose) if glucose else 0  # Conversione a float
     if 70 <= glucose <= 105:
@@ -161,6 +162,8 @@ def calculate_biological_age(chronological_age, obri_index, d_roms, aa_epa, aa_d
     """Calcola l'età biologica basata sui biomarcatori forniti."""
     biological_age = chronological_age
 
+
+
     # Aggiustamenti basati sui vari parametri
     biological_age += adjust_age_obri(obri_index)
     biological_age += adjust_age_d_roms(d_roms)
@@ -180,4 +183,5 @@ def calculate_biological_age(chronological_age, obri_index, d_roms, aa_epa, aa_d
     biological_age += adjust_age_bilirubin(exams[5])
     biological_age += adjust_age_uric_acid(exams[6])
 
-    return biological_age
+
+    return biological_age 

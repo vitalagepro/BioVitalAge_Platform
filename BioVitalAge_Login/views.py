@@ -69,6 +69,7 @@ class CalcolatoreView(View):
             )
             data['biological_age'] = biological_age
 
+
             # Salva i dati nel database
             persona = Persona.objects.create(**data)
             logger.info(f"Persona salvata nel database con ID: {persona.id}")

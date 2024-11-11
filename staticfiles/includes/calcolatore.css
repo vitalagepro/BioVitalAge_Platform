@@ -128,44 +128,39 @@ form{
 }
 
 
-.modal {
-    display: none; 
+.modal{
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
+    padding: 0 20px;
+}
+.modal.show {
+    display: flex;
 }
 .modal-container {
     background-color: whitesmoke;
     padding: 20px;
     border-radius: 8px;
-    width: 500px;
-    height: 550px;
+    width: 800px;
+    height: 600px;
 }
-.modal-container h3{
+.modal-container h3 {
     color: var(--contrast-color);
 }
-.modal-container p{
+.modal-container p {
     font-size: 18px;
 }
-.modal-container p span{
+.modal-container p span {
     color: var(--contrast-color2);
     font-weight: bold;
 }
-
-.Subtitle{
-    font-weight: bold;
-}
-.valoriInseritiContainer{
-    background-color: var(--contrast-color-shadow);
-    max-height: 300px;
-    overflow: auto;
-    padding: 20px;
-}
-
-.modal-container button{
+.modal-container button {
     margin-top: 2rem;
     height: 2.5rem;
     width: 12rem;
@@ -174,4 +169,49 @@ form{
     background-color: var(--contrast-color2);
     border: none;
     color: var(--tittle1);
+}
+.Subtitle {
+    font-weight: bold;
+}
+.valoriInseritiContainer {
+    max-height: 400px;
+    overflow: auto;
+}
+.indicator{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.barra-container{
+    background-color: var(--neutral-gray);
+    border-radius: 8px;
+    height: 1.5rem;
+    position: relative;
+}
+.barra-pointer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 8px;
+    width: 60%; /* Da modificare dinamicamente */
+}
+.indicator-container{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--contrast-color-shadow);
+    padding: 10px 10px;
+    border-radius: 8px;
+}
+.positiveTesto{
+    color: var(--positive-color);
+}
+.negativeTesto{
+    color: red;
+}
+.positive{
+    background-color: var(--positive-color);
+}
+.negative{
+    background-color: red;
 }
