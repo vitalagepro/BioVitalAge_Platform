@@ -1,0 +1,177 @@
+
+:root{
+    --dark1: #0c042c; 
+    --dark2: #0c214b; 
+    --light1: #c3ccd4; 
+
+    --neutral-gray: #b0b8c1;
+    --neutral-bg-color: rgba(176, 184, 193, 0.2);
+    --neutral-bg-color-contrast: rgba(124, 81, 149, 0.2); 
+    
+    --contrast-color: #3a255d;
+    --contrast-color-shadow: #3b255d2c; 
+    --contrast-color2: #6a2dcc; 
+    --positive-color: #2ac670; 
+            
+    --tittle1: whitesmoke; 
+    --tittle2: #2ac4dd; 
+
+    --circle-color-shadow: rgba(42, 196, 221,0.15);
+    --circle-color-shadow-two: rgba(42, 196, 221,0.05)
+}
+
+
+main{
+    height: 1200px;
+}
+form{
+    margin: auto;
+}
+.containerInfoPatient{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.PatientInfoContainer{
+    border-radius: 8px;
+    background-color: whitesmoke;
+}
+.PatientInfoContainer h3{
+    color: var(--contrast-color);
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 0rem;
+}
+.containerInput{
+    flex-wrap: wrap;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.form-group label{
+    color: var(--dark1);
+    padding: 8px;
+}
+.form-group input{
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    border-bottom: 2px solid var(--contrast-color2);
+    height: 2.5rem;
+    outline-color: var(--contrast-color-shadow);
+    padding: 15px;
+    box-shadow: 1px 1px 10px 3px rgba(0,0,0,0.1);
+}
+.form-group select{
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    border-bottom: 2px solid var(--contrast-color2);
+    height: 2.5rem;
+    outline-color: var(--contrast-color-shadow);
+    padding: 5px;
+    box-shadow: 1px 1px 10px 3px rgba(0,0,0,0.1);
+}   
+#PrimoContainerPatient{
+    max-width: 57rem;
+}
+#bloodTest{
+    margin-top: 1rem;
+}
+#other{
+    border-radius: 8px;
+    background-color: whitesmoke;
+    padding-bottom: 25px;
+}
+#other h3{
+    color: var(--contrast-color);
+    padding-top: 20px;
+}
+#other .containerInput{
+    justify-content: center;
+    align-items: center;
+}
+#other .form-group{
+    padding: 17px;
+}
+#other .form-group input{
+    width: 14rem;
+}
+
+.button-container{
+    gap: 20px;
+}
+.button-container button{
+    width: 15rem;
+    height: 2.5rem;
+    font-size: 18px;
+    color: var(--tittle1);
+    background-color: var(--contrast-color2);
+    border-radius: 8px;
+    border: none;
+}
+.button-container a{
+    border-radius: 8px;
+    border: 2px solid var(--contrast-color2);
+    color: var(--tittle1);
+    height: 2.5rem;
+    padding: 5px;
+    text-decoration: none;
+    width: 12rem;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+.modal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.modal-container {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    height: 550px;
+}
+.modal-container h3{
+    color: var(--contrast-color);
+}
+.modal-container p{
+    font-size: 18px;
+}
+.modal-container p span{
+    color: var(--contrast-color2);
+    font-weight: bold;
+}
+
+.Subtitle{
+    font-weight: bold;
+}
+.valoriInseritiContainer{
+    background-color: var(--contrast-color-shadow);
+    max-height: 300px;
+    overflow: auto;
+    padding: 20px;
+}
+
+.modal-container button{
+    margin-top: 2rem;
+    height: 2.5rem;
+    width: 12rem;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: var(--contrast-color2);
+    border: none;
+    color: var(--tittle1);
+}

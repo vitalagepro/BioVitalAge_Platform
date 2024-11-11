@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persona Details</title>
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'includes/homePage.css' %}">
+    <link rel="stylesheet" href="{% static 'includes/risultati.css' %}">
+    <link rel="stylesheet" href="{% static 'includes/persona_detail.css' %}"> 
+</head>
+<body>
+    <header>
+        <h1>Details for {{ persona.name }} {{ persona.surname }}</h1>
+    </header>
+    <main class="detail-container">
+        <div class="detail-card">
+            <div class="detail-row">
+                <span class="detail-label">Name:</span>
+                <span class="detail-value">{{ persona.name }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Surname:</span>
+                <span class="detail-value">{{ persona.surname }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Date of Birth:</span>
+                <span class="detail-value">{{ persona.dob|date:"d/m/Y" }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Codice Fiscale:</span>
+                <span class="detail-value">{{ persona.codice_fiscale }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Place of Birth:</span>
+                <span class="detail-value">{{ persona.place_of_birth }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Chronological Age:</span>
+                <span class="detail-value">{{ persona.chronological_age }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Biological Age:</span>
+                <span class="detail-value">{{ persona.biological_age }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Obri Index:</span>
+                <span class="detail-value">{{ persona.obri_index }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">d-ROMs:</span>
+                <span class="detail-value">{{ persona.d_roms }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">AA/EPA Ratio:</span>
+                <span class="detail-value">{{ persona.aa_epa }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">AA/DHA Ratio:</span>
+                <span class="detail-value">{{ persona.aa_dha }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">HOMA Test:</span>
+                <span class="detail-value">{{ persona.homa_test }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Cardiovascular Risk:</span>
+                <span class="detail-value">{{ persona.cardiovascular_risk }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Oxidative Stress Index (OSI):</span>
+                <span class="detail-value">{{ persona.osi }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Plasma Antioxidant Test (PAT):</span>
+                <span class="detail-value">{{ persona.pat }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">White Blood Cells (WBC):</span>
+                <span class="detail-value">{{ persona.wbc }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Basophils (%):</span>
+                <span class="detail-value">{{ persona.baso }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Eosinophils (%):</span>
+                <span class="detail-value">{{ persona.eosi }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Lymphocytes (%):</span>
+                <span class="detail-value">{{ persona.lymph }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Monocytes (%):</span>
+                <span class="detail-value">{{ persona.mono }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Neutrophils (%):</span>
+                <span class="detail-value">{{ persona.neut }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Red Blood Cells (RBC):</span>
+                <span class="detail-value">{{ persona.rbc }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Hematocrit (HCT):</span>
+                <span class="detail-value">{{ persona.hct }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Hemoglobin (HGB):</span>
+                <span class="detail-value">{{ persona.hgb }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Mean Corpuscular Hemoglobin (MCH):</span>
+                <span class="detail-value">{{ persona.mch }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Mean Corpuscular Hemoglobin Concentration (MCHC):</span>
+                <span class="detail-value">{{ persona.mchc }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Mean Corpuscular Volume (MCV):</span>
+                <span class="detail-value">{{ persona.mcv }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Glucose (mg/dL):</span>
+                <span class="detail-value">{{ persona.glucose }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Creatinine (mg/dL):</span>
+                <span class="detail-value">{{ persona.creatinine }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Ferritin (ng/mL):</span>
+                <span class="detail-value">{{ persona.ferritin }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Albumin (g/dL):</span>
+                <span class="detail-value">{{ persona.albumin }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Total Protein (g/dL):</span>
+                <span class="detail-value">{{ persona.protein }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Bilirubin (mg/dL):</span>
+                <span class="detail-value">{{ persona.bilirubin }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Uric Acid (mg/dL):</span>
+                <span class="detail-value">{{ persona.uric_acid }}</span>
+            </div>
+        </div>
+        <a class="back-button" href="{% url 'risultati' %}">Back to Results</a>
+    </main>
+</body>
+</html>

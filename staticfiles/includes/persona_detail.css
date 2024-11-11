@@ -1,0 +1,65 @@
+/* Apply the Quicksand font to the entire body */
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f4f4f4; /* Light background for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: var(--dark2); /* Dark header */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Main container for details */
+.detail-container {
+    width: 90%; /* Adjust for better responsiveness */
+    max-width: 800px; /* Center the content */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* White background for details */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Each row for detail items */
+.detail-card {
+    margin: 10px 0; /* Spacing between fields */
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between; /* Space between label and value */
+    padding: 10px 0; /* Padding for better spacing */
+    border-bottom: 1px solid #e0e0e0; /* Light border for separation */
+}
+
+/* Label styles */
+.detail-label {
+    font-weight: bold; /* Bold for labels */
+    color: var(--dark1); /* Use your dark color variable */
+}
+
+/* Value styles */
+.detail-value {
+    color: var(--dark2); /* Use your secondary dark color */
+}
+
+/* Back button styling */
+.back-button {
+    display: inline-block;
+    margin-top: 20px; /* Spacing above the button */
+    padding: 10px 20px;
+    background-color: var(--contrast-color2); /* Use your contrast color */
+    color: #fff; /* White text for contrast */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.back-button:hover {
+    background-color: var(--contrast-color); /* Darker shade on hover */
+}
