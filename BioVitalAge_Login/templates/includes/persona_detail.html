@@ -115,32 +115,30 @@
                         </div>
                     </div>
 
-
                     <div class="indicator-container">
                         <p><span>d-ROMs:</span>{{ persona.d_roms }}</p>
                         <div class="indicator-content-container">
                             <div class="indicator">
-                                <p class="negativeTesto">Cattivo</p>
-                                <p class="positiveTesto">Buono</p>
+                                <p class="negativeTesto">400 <</p>
+                                <p class="positiveTesto">300 - 250</p>
                             </div>
                         
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.d_roms }}"></p>
                             </div>
                         </div>
                     </div>
-
 
                     <div class="indicator-container">
                         <p><span>AA/EPA Ratio:</span>{{ persona.aa_epa }}</p>
                         <div class="indicator-content-container">
                             <div class="indicator">
-                                <p class="negativeTesto">Cattivo</p>
-                                <p class="positiveTesto">Buono</p>
+                                <p class="negativeTesto">15 <</p>
+                                <p class="positiveTesto">3 - 1</p>
                             </div>
                         
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.aa_epa }}"></p>
                             </div>
                         </div>
                     </div>
@@ -149,12 +147,12 @@
                         <p><span>AA/DHA Ratio:</span>{{ persona.aa_dha }}</p>
                         <div class="indicator-content-container">
                             <div class="indicator">
-                                <p class="negativeTesto">Cattivo</p>
-                                <p class="positiveTesto">Buono</p>
+                                <p class="negativeTesto">4.3 <</p>
+                                <p class="positiveTesto">3.6 - 1.6</p>
                             </div>
                         
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.aa_dha }}"></p>
                             </div>
                         </div>
                     </div>
@@ -164,12 +162,12 @@
                         <p><span>HOMA Test:</span>{{ persona.homa_test }}</p>
                         <div class="indicator-content-container">
                             <div class="indicator">
-                                <p class="negativeTesto">Cattivo</p>
-                                <p class="positiveTesto">Buono</p>
+                                <p class="negativeTesto">0.3</p>
+                                <p class="positiveTesto">2.5</p>
                             </div>
                         
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.homa_test }}"></p>
                             </div>
                         </div>
                     </div>
@@ -178,12 +176,12 @@
                         <p><span>Cardiovascular Risk:</span>{{ persona.cardiovascular_risk }}</p>
                         <div class="indicator-content-container">
                             <div class="indicator">
-                                <p class="negativeTesto">Cattivo</p>
-                                <p class="positiveTesto">Buono</p>
+                                <p class="negativeTesto">20 - 3</p>
+                                <p class="positiveTesto">< 3</p>
                             </div>
                         
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.cardiovascular_risk }}"></p>
                             </div>
                         </div>
                     </div>
@@ -192,11 +190,11 @@
                         <p><span>Oxidative Stress Index (OSI):</span>{{ persona.osi }}</p>
                         <div class="indicator-content-container">
                             <div class="indicator">
-                                <p class="negativeTesto">Cattivo</p>
-                                <p class="positiveTesto">Buono</p>
+                                <p class="negativeTesto">120 - 66</p>
+                                <p class="positiveTesto">40 - 0</p>
                             </div>
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.osi }}"></p>
                             </div>
                         </div>
                     </div>
@@ -205,11 +203,11 @@
                         <p><span>Plasma Antioxidant Test (PAT):</span>{{ persona.pat }}</p>
                         <div class="indicator-content-container">
                             <div class="indicator">
-                                <p class="negativeTesto">Cattivo</p>
-                                <p class="positiveTesto">Buono</p>
+                                <p class="negativeTesto">2800 - 2270</p>
+                                <p class="positiveTesto"> < 1800</p>
                             </div>
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.pat }}"></p>
                             </div>
                         </div>
                     </div>
@@ -222,7 +220,7 @@
                                 <p class="positiveTesto">Buono</p>
                             </div>
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.wbc }}"></p>
                             </div>
                         </div>
                     </div>
@@ -235,7 +233,7 @@
                                 <p class="positiveTesto">Buono</p>
                             </div>
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.baso }}"></p>
                             </div>
                         </div>
                     </div>
@@ -248,7 +246,7 @@
                                 <p class="positiveTesto">Buono</p>
                             </div>
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.eosi }}"></p>
                             </div>
                         </div>
                     </div>
@@ -261,7 +259,7 @@
                                 <p class="positiveTesto">Buono</p>
                             </div>
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.lymph }}"></p>
                             </div>
                         </div>
                     </div>
@@ -274,7 +272,7 @@
                                 <p class="positiveTesto">Buono</p>
                             </div>
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.mono }}"></p>
                             </div>
                         </div>
                     </div>
@@ -287,7 +285,7 @@
                                 <p class="positiveTesto">Buono</p>
                             </div>
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.neut }}"></p>
                             </div>
                         </div>
                     </div>
@@ -300,7 +298,7 @@
                                 <p class="positiveTesto">Buono</p>
                             </div>
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.rbc }}"></p>
                             </div>
                         </div>
                     </div>
@@ -313,7 +311,7 @@
                                 <p class="positiveTesto">Buono</p>
                             </div>
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.hct }}"></p>
                             </div>
                         </div>
                     </div>
@@ -326,7 +324,7 @@
                                 <p class="positiveTesto">Buono</p>
                             </div>
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.hgb }}"></p>
                             </div>
                         </div>
                     </div>
@@ -339,7 +337,7 @@
                                 <p class="positiveTesto">Buono</p>
                             </div>
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.mch }}"></p>
                             </div>
                         </div>
                     </div>
@@ -352,7 +350,7 @@
                                 <p class="positiveTesto">Buono</p>
                             </div>
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.mchc }}"></p>
                             </div>
                         </div>
                     </div>
@@ -365,7 +363,7 @@
                                 <p class="positiveTesto">Buono</p>
                             </div>
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.mcv }}"></p>
                             </div>
                         </div>
                     </div>
@@ -374,11 +372,11 @@
                         <p><span>Glucose (mg/dL):</span>{{ persona.glucose }}</p>
                         <div class="indicator-content-container">
                             <div class="indicator">
-                                <p class="negativeTesto">Cattivo</p>
-                                <p class="positiveTesto">Buono</p>
+                                <p class="negativeTesto">140 <</p>
+                                <p class="positiveTesto">105 - 70</p>
                             </div>
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.glucose }}"></p>
                             </div>
                         </div>
                     </div>
@@ -387,11 +385,11 @@
                         <p><span>Creatinine (mg/dL):</span>{{ persona.creatinine }}</p>
                         <div class="indicator-content-container">
                             <div class="indicator">
-                                <p class="negativeTesto">Cattivo</p>
-                                <p class="positiveTesto">Buono</p>
+                                <p class="negativeTesto">0.9 <</p>
+                                <p class="positiveTesto">0.5 - 0.9</p>
                             </div>
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.creatinine }}"></p>
                             </div>
                         </div>
                     </div>
@@ -400,11 +398,11 @@
                         <p><span>Ferritin (ng/mL):</span>{{ persona.ferritin }}</p>
                         <div class="indicator-content-container">
                             <div class="indicator">
-                                <p class="negativeTesto">Cattivo</p>
-                                <p class="positiveTesto">Buono</p>
+                                <p class="negativeTesto">150 <</p>
+                                <p class="positiveTesto">150 - 13</p>
                             </div>
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.ferritin }}"></p>
                             </div>
                         </div>
                     </div>
@@ -413,11 +411,11 @@
                         <p><span>Albumin (g/dL):</span>{{ persona.albumin }}</p>
                         <div class="indicator-content-container">
                             <div class="indicator">
-                                <p class="negativeTesto">Cattivo</p>
-                                <p class="positiveTesto">Buono</p>
+                                <p class="negativeTesto">5.2 <</p>
+                                <p class="positiveTesto">5.2 - 3.5</p>
                             </div>
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.albumin }}"></p>
                             </div>
                         </div>
                     </div>
@@ -426,11 +424,11 @@
                         <p><span>Total Protein (g/dL):</span>{{ persona.protein }}</p>
                         <div class="indicator-content-container">
                             <div class="indicator">
-                                <p class="negativeTesto">Cattivo</p>
-                                <p class="positiveTesto">Buono</p>
+                                <p class="negativeTesto">6.6 <</p>
+                                <p class="positiveTesto">8.7 < 6.6</p>
                             </div>
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.protein }}"></p>
                             </div>
                         </div>
                     </div>
@@ -439,11 +437,11 @@
                         <p><span>Bilirubin (mg/dL):</span>{{ persona.bilirubin }}</p>
                         <div class="indicator-content-container">
                             <div class="indicator">
-                                <p class="negativeTesto">Cattivo</p>
-                                <p class="positiveTesto">Buono</p>
+                                <p class="negativeTesto">1.2 <</p>
+                                <p class="positiveTesto">1.2 < 0</p>
                             </div>
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.bilirubin }}"></p>
                             </div>
                         </div>
                     </div>
@@ -452,29 +450,19 @@
                         <p><span>Uric Acid (mg/dL):</span>{{ persona.uric_acid }}</p>
                         <div class="indicator-content-container">
                             <div class="indicator">
-                                <p class="negativeTesto">Cattivo</p>
-                                <p class="positiveTesto">Buono</p>
+                                <p class="negativeTesto">7.2 <</p>
+                                <p class="positiveTesto">7.2 - 3.5</p>
                             </div>
                             <div class="col-md-12 p-2 barra-container">
-                                <p class="barra-pointer positive"></p>
+                                <p class="barra-pointer positive" data-value="{{ persona.uric_acid }}"></p>
                             </div>
                         </div>
                     </div>
-                    
 
-             
-            </div>
+                </div>
             </div>
         </div>
-
-
-
-
-
-
-
     </main>
-
 </body>
 </html>
 

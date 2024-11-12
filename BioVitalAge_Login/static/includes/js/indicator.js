@@ -34,16 +34,11 @@ else{
 }
 
 
-const percentuale = ((valoreBarra - negativeRange) / (positiveRange - negativeRange)) * 100;
-
-console.log(percentuale); 
+const percentuale = ((NegativeCheckedRange - valoreBarra) / (NegativeCheckedRange - PositiveCheckedRange)) * 100;
 
 
+barraIndicator = bars[0].querySelector('.barra-pointer')
+barraIndicator.classList.add('positive');
 
-
-
-
-
-barraIndicator = bars[0].querySelector('.barra-pointer').textContent
-
+barraIndicator.style.width = `${parseInt(percentuale)}%`;
 
