@@ -153,10 +153,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    r"C:\Users\diven\Desktop\BioVitalAge-Demo-DataBaseFinale\BioVitalAge_Login\static",
-]
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
