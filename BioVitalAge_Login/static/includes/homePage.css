@@ -667,7 +667,133 @@ main{
     background-color: var(--bg-color-dark);
 }
 
+/* Adattiamo la sezione del grafico per Età Cronologica e Età Biologica */
+.main-content-chronologic-age {
+    top: 0;
+    right: 0;
+    width: 39.5%;
+    height: 59%;
+    background-color: var(--neutral-bg-color); /* Sfondo neutro */
+    padding: 1rem;
+    border-radius: 10px;
+}
 
+/* Stile del contenitore del grafico */
+.chronologic-age-graphic-container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 80%;
+    margin: auto;
+}
+
+/* Etichetta laterale per l’età */
+.chronologic-age-lateral-words {
+    transform: rotate(-90deg);
+    height: auto;
+    margin-right: 10px;
+    color: var(--tittle1);
+    font-weight: bold;
+}
+
+/* Numeri laterali per la scala */
+.lateral-number {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    font-weight: bold;
+    color: var(--neutral-gray);
+}
+
+/* Contenitore della barra principale */
+.graphic-container-indicator-container {
+    width: 100%;
+    border-left: 1px solid var(--neutral-gray);
+    margin-left: 10px;
+    position: relative;
+}
+
+/* Contenitore delle barre di età */
+.indicator-container-value-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+/* Fascia colorata per Età Cronologica */
+.first-indicator-container {
+    width: 48%;
+    background-color: var(--lighter-one-color);
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* Altezza della barra per l'età cronologica */
+.first-indicator-value-container {
+    background-color: var(--positive-color);
+    width: 100%;
+}
+
+/* Valore numerico dell'età cronologica */
+.first-indicator-value {
+    position: absolute;
+    bottom: 5px;
+    font-weight: bold;
+    color: var(--dark1);
+}
+
+/* Fascia colorata per Età Biologica */
+.second-indicator-container {
+    width: 48%;
+    background-color: var(--lighter-two-color);
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* Altezza della barra per l'età biologica */
+.second-indicator-value-container {
+    background-color: var(--contrast-color2);
+    width: 100%;
+}
+
+/* Valore numerico dell'età biologica */
+.second-indicator-value {
+    position: absolute;
+    bottom: 5px;
+    font-weight: bold;
+    color: var(--dark1);
+}
+
+/* Stile per la legenda */
+.crhonologic-graph-legenda {
+    width: 60%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-legenda-indicator {
+    width: 1.5rem;
+    height: 1rem;
+    background-color: var(--lighter-one-color);
+    margin-right: 5px;
+}
+
+.second-legenda-indicator {
+    width: 1.5rem;
+    height: 1rem;
+    background-color: var(--lighter-two-color);
+    margin-right: 5px;
+}
 
 
 
