@@ -31,7 +31,7 @@
 
         <nav class="col-md-12 d-flex justify-content-between align-items-center nav-bar ">
             <div class="col-md-2 d-flex jus  nav-bar-logo">
-                <img src="{% static 'includes/icone/logo.png' %}" alt="">
+                <img src="{% static 'includes/icone/Logo.png' %}" alt="">
             </div>
             <div class="col-md-8 nav-bar-linkage">
                 <a href="{% url 'home_page' %}" >HomePage</a>
@@ -53,7 +53,7 @@
 
     <main>
 
-        <div id="myModal" class="modal" style="display: flex;">
+        <div id="myModal" class="modal">
             <div class="modal-container">
                 <h3>Risultato Calcolo età Biologica</h3>
                 <p>{{ data.name }}, la tua età biologica calcolata attraverso i dati inseriti è: <span>{{ biological_age }}</span></p>
