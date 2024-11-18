@@ -19,6 +19,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="{% static 'includes/js/pdfGenerator.js' %}" defer></script>
 </head>
 <body>
     <header>
@@ -538,6 +540,49 @@
                 </div>
             </div>
         </div>
+        <button id="generatePDFButton">Genera PDF</button>
+        <script>
+            window.personaData = {
+                name: "{{ persona.name }}",
+                surname: "{{ persona.surname }}",
+                dob: "{{ persona.dob|date:'d/m/Y' }}",
+                gender: "{{ persona.gender }}",
+                place_of_birth: "{{ persona.place_of_birth }}",
+                codice_fiscale: "{{ persona.codice_fiscale }}",
+                chronological_age: "{{ persona.chronological_age }}",
+                biological_age: "{{ persona.biological_age }}",
+                obri_index: "{{ persona.obri_index }}",
+                d_roms: "{{ persona.d_roms }}",
+                aa_epa: "{{ persona.aa_epa }}",
+                aa_dha: "{{ persona.aa_dha }}",
+                homa_test: "{{ persona.homa_test }}",
+                cardiovascular_risk: "{{ persona.cardiovascular_risk }}",
+                osi: "{{ persona.osi }}",
+                pat: "{{ persona.pat }}",
+                wbc: "{{ persona.wbc }}",
+                baso: "{{ persona.baso }}",
+                eosi: "{{ persona.eosi }}",
+                lymph: "{{ persona.lymph }}",
+                mono: "{{ persona.mono }}",
+                neut: "{{ persona.neut }}",
+                rbc: "{{ persona.rbc }}",
+                hct: "{{ persona.hct }}",
+                hgb: "{{ persona.hgb }}",
+                mch: "{{ persona.mch }}",
+                mchc: "{{ persona.mchc }}",
+                mcv: "{{ persona.mcv }}",
+                glucose: "{{ persona.glucose }}",
+                creatinine: "{{ persona.creatinine }}",
+                ferritin: "{{ persona.ferritin }}",
+                albumin: "{{ persona.albumin }}",
+                protein: "{{ persona.protein }}",
+                bilirubin: "{{ persona.bilirubin }}",
+                uric_acid: "{{ persona.uric_acid }}"
+            };
+        </script>
+        <script src="{% static 'includes/js/pdfGenerator.js' %}?v={{ timestamp }}"></script>
+
+        
     </main>
 
    
