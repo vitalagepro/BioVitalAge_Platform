@@ -1,0 +1,170 @@
+                                      +----------------+
+                                      |    develop     |
+                                      +--------+-------+
+                                               |
+   feature/feat-A ───┐                         |
+                     ├───> merge PR ────────────┤
+   feature/feat-B ───┘                         |
+                                               v
+                                      +----------------+
+                                      | release/v1.3.0 |
+                                      +--------+-------+
+                                               |
+    (bump version in files)                    |
+                                               v
+                                      +----------------+
+                                      |     main       |──┐
+                                      +--------+-------+  |
+                                               |          |
+                                    tag v1.3.0 │          |
+                                               v          |
+                                      +----------------+  |
+                                      |  production    |  |
+                                      +--------+-------+  |
+                                               |          |
+                                               └── deploy ─► (es. server, Docker Hub…)
+
+
+
+Step-by-step con comandi
+1. Prepara i rami iniziali
+bash
+Copia
+Modifica
+# Clona e posizionati nella cartella
+git clone https://github.com/tuo-username/BioVitalAge_Platform.git
+cd BioVitalAge_Platform
+
+# Crea e metti online il ramo di integrazione
+git checkout -b develop
+git push -u origin develop
+2. Sviluppo in feature branch
+Per ogni nuova feature:
+
+bash
+Copia
+Modifica
+# Crea il branch da develop
+git checkout develop
+git pull origin develop
+git checkout -b feature/descrizione-breve
+
+# Lavori, poi…
+git add .
+git commit -m "feature: descrizione della feature"
+
+# Pubblica e apri PR verso develop
+git push -u origin feature/descrizione-breve
+Dopo code review e CI verde, fai merge su develop e cancella il feature branch:
+
+bash
+Copia
+Modifica
+git push origin --delete feature/descrizione-breve
+git branch -d feature/descrizione-breve
+3. Preparazione di una release
+Quando develop è pronto per una versione (es. 1.3.0):
+
+bash
+Copia
+Modifica
+# 1. Crea il release branch
+git checkout develop
+git pull origin develop
+git checkout -b release/1.3.0
+
+# 2. Bump di versione (es. in VERSION o settings.py)
+echo "1.3.0" > VERSION
+git add VERSION
+git commit -m "chore: bump version to 1.3.0"
+
+# 3. Testa e correggi eventuali bug sul branch release/1.3.0...
+4. Merge del release branch e creazione del tag
+bash
+Copia
+Modifica
+# 4a. Merge in main
+git checkout main
+git pull origin main
+git merge --no-ff release/1.3.0 -m "chore: merge release 1.3.0 into main"
+
+# 4b. Crea un tag annotato per Marcare la release
+git tag -a v1.3.0 -m "Release v1.3.0: aggiunte feature A, B e fix C"
+
+# 4c. Pubblica main e tag sul remoto
+git push origin main
+git push origin v1.3.0
+# oppure, per inviare tutti i tag locali in un colpo solo:
+# git push origin --tags
+
+# 4d. Riporta eventuali fix su develop
+git checkout develop
+git merge --no-ff release/1.3.0
+git push origin develop
+
+# 4e. Pulisci il branch di release
+git branch -d release/1.3.0
+git push origin --delete release/1.3.0
+5. Deploy in produzione
+Se utilizzi un ramo dedicato:
+
+bash
+Copia
+Modifica
+# Al primo setup
+git checkout main
+git checkout -b production
+git push -u origin production
+
+# Ad ogni release:
+git checkout production
+git merge --no-ff main -m "chore: sync production from main (v1.3.0)"
+git push origin production
+Il tuo sistema di CI/CD (GitHub Actions, ecc.) guarderà il push su production e farà il deploy automatico.
+
+Riepilogo tag
+Creare:
+
+bash
+Copia
+Modifica
+git tag -a vX.Y.Z -m "Release vX.Y.Z: descrizione"
+Pubblicare:
+
+bash
+Copia
+Modifica
+git push origin vX.Y.Z
+# o tutti: git push origin --tags
+Usare (ispezionare):
+
+bash
+Copia
+Modifica
+git checkout vX.Y.Z
+Partire da un tag per hotfix:
+
+bash
+Copia
+Modifica
+git checkout -b hotfix/vX.Y.Z vX.Y.Z
+Cancellare:
+
+bash
+Copia
+Modifica
+git tag -d vX.Y.Z
+git push origin --delete vX.Y.Z
+Con questo workflow avrai sempre:
+
+Feature branch brevi e isolati
+
+Un ramo develop pulito per i test
+
+Release branch per il bump e le correzioni finali
+
+Tag per ogni rilascio, chiari e immutabili
+
+Un ramo production dedicato al deploy
+
+Fammi sapere se vuoi configurare anche la GitHub Action che si attiva al push di un tag (ad es. on: push: tags: ['v*.*.*'])!
